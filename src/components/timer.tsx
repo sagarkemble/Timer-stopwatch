@@ -38,7 +38,6 @@ const Timer = ({
         <TimeUnit
           value={pad(hours)}
           label="hr"
-          unit="hours"
           onUp={() => adjust("hours", 1)}
           onDown={() => adjust("hours", -1)}
           disabled={isTimerRunning}
@@ -47,7 +46,6 @@ const Timer = ({
         <TimeUnit
           value={pad(minutes)}
           label="min"
-          unit="minutes"
           onUp={() => adjust("minutes", 1)}
           onDown={() => adjust("minutes", -1)}
           disabled={isTimerRunning}
@@ -56,7 +54,6 @@ const Timer = ({
         <TimeUnit
           value={pad(seconds)}
           label="sec"
-          unit="seconds"
           onUp={() => adjust("seconds", 1)}
           onDown={() => adjust("seconds", -1)}
           disabled={isTimerRunning}
@@ -117,14 +114,12 @@ const ArrowDown = () => (
 const TimeUnit = ({
   value,
   label,
-  unit,
   onUp,
   onDown,
   disabled,
 }: {
   value: string
   label: string
-  unit: string
   onUp: () => void
   onDown: () => void
   disabled: boolean
